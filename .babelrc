@@ -1,0 +1,17 @@
+{
+    "presets": [ "react", "env", "es2015", "stage-0"],
+    "plugins": [
+        [
+            "root-import", {
+                "rootPathSuffix": "src/jsx",
+                "rootPathPrefix": "@"
+            },
+            {
+                "rootPathSuffix": "./",
+                "rootPathPrefix": "~"
+            }
+        ],
+        "transform-inline-environment-variables",
+        "transform-decorators-legacy"
+    ]
+}
