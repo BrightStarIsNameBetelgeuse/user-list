@@ -9,11 +9,11 @@ import { Home, UserList } from 'jsx/components';
 const Layout = () => (
     <Router>
         <div className="root-container d-flex flex-column">
-            <ul className='nav col-md-3'>
+            <ul className="nav">
                 <li className='nav-item'><Link to="/" className="nav-link">Home</Link></li>
                 <li className='nav-item'><Link to="/users" className="nav-link">Users List</Link></li>
             </ul>
-            <div className="col-md-9">
+            <div className="">
                 <Route exact path="/" component={Home} />
                 <Route path="/users" component={UserList} />
             </div>

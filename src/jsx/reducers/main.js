@@ -6,7 +6,9 @@ const initialState = () => ({
     ui: {
         loading: false,
     },
-    payload: {},
+    payload: {
+        userlist: [],
+    },
 });
 
 export default (state = initialState(), action) => {
@@ -14,7 +16,8 @@ export default (state = initialState(), action) => {
         case actions.SET_LOADING:
             return immutable.set(state, 'ui.loading', action.value);
         case actions.SET_USERLIST:
-            return immutable.set(state, 'payload.userlist', action.value);
+            const value = action.value || [];
+            return immutable.set(state, 'payload.userlist', value);
         default:
             return state;
     }
